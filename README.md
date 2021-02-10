@@ -8,10 +8,10 @@ A princípio vou dar um start num projeto laravel/lumen e aplicar alguns conceit
 
 ### How to run
 
-Pra rodar o projeto, tenha em sua máquina o **docker** instalado para poder subir o container.
+Pra rodar o projeto, tenha em sua máquina o **docker** e o **docker-compose** instalado para poder subir o container.
 
 Um detalhe bastante importante é que precisará colocar as variáveis de ambiente pra funcionar o projeto. Na raiz do projeto terá um arquivo **.env.example**, use ele como base para criar o arquivo **.env**, que é onde o projeto busca essas variáveis
 
 ```bash
-	$ ./up.sh
+$ docker-compose up -d --build
 ```
