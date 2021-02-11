@@ -49,6 +49,10 @@ class Deezer
 
     public function getGenreIdByName(string $name): int
     {
+        if (!isset($this->genres[$name])) {
+            throw new \Exception("Gênero não encontrado.");
+        }
+
         return $this->genres[$name];
     }
 }

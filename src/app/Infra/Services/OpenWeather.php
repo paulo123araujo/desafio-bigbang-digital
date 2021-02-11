@@ -42,8 +42,6 @@ class OpenWeather
 
         $response = Http::get($uri);
 
-        dd($response);
-
         if ($response->status() !== 200) {
             throw new \Exception("Erro ao fazer a requisição à api do open weather.");
         }
