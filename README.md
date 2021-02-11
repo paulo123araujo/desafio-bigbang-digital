@@ -12,6 +12,17 @@ Pra rodar o projeto, tenha em sua máquina o **docker** e o **docker-compose** i
 
 Um detalhe bastante importante é que precisará colocar as variáveis de ambiente pra funcionar o projeto. Na raiz do projeto terá um arquivo **.env.example**, use ele como base para criar o arquivo **.env**, que é onde o projeto busca essas variáveis
 
+Subir projeto:
+
 ```bash
 $ docker-compose up -d --build
 ```
+
+Rodar testes:
+```bash
+$ ./src/vendor/bin/phpunit
+```
+
+Rodar analise estática do código:
+```bash
+$ ./src/vendor/bin/phpcs --standard=PSR12 app/ tests/
