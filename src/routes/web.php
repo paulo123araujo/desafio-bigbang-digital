@@ -16,3 +16,6 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/city/{city}/artists', 'ArtistsByCityFactory@handle');
+$router->get('/latitude/{latitude}/longitude/{longitude}/artists', 'ArtistsByLatitudeLongitudeFactory@handle');
